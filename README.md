@@ -1,66 +1,126 @@
-# Ribhu S
+<div align="center">
 
-**Backend & AI systems engineer** building concurrent booking infrastructure, LLM-powered career tooling, and applied ML products.
+![Ribhu Siripurapu](./assets/hero.svg)
+
+**Backend & AI systems engineer** — concurrent Go/Redis services, FastAPI platforms, and applied ML wired into real APIs.
 
 B.Tech CSE (Data Science) @ MGIT, Hyderabad · Open to AI/ML & backend internships
 
----
-
-### What I build
-
-I work across the stack where systems stress matters: high-concurrency backends, Redis-backed allocation, FastAPI services, and ML/NLP models wired into real UIs — not notebook demos alone.
-
-Current focus: **concurrent systems (Go + Redis)**, **agentic career platforms**, and **production-shaped ML APIs**.
+</div>
 
 ---
 
-### Featured projects
+<div align="center">
 
-| Project | One-liner |
-|--------|-----------|
-| [**Ticket Engine**](https://github.com/granzer69/Ticket-Engine) | Go + Redis Lua booking engine with atomic allocation, idempotent retries, Redis Streams → MySQL persistence, Docker Compose, and k6 load scripts |
-| [**Range-Apply**](https://github.com/granzer69/Range-Apply) | FastAPI job-intelligence platform: ATS discovery (Greenhouse/Lever/Ashby), normalization, dedup/provenance, and match-engine scaffolding (autonomous apply still in progress) |
-| [**CareerOS**](https://github.com/granzer69/CareerOS) | FastAPI + React resume analysis with JWT auth, PostgreSQL, Alembic, and Anthropic Claude structured scoring |
-| [**fake-news-analyzer**](https://github.com/granzer69/fake-news-analyzer) | FastAPI + Next.js media-trust pipeline using a Hugging Face fake-news classifier, VADER sentiment, and heuristic trust/clickbait scores |
-| [**Stock-Market-Predictor**](https://github.com/granzer69/Stock-Market-Predictor) | Keras sequence model for next-day close prediction, FastAPI inference API, and Next.js dashboard (CSV/historical data) |
-| [**Plant-Disease-Classification**](https://github.com/granzer69/Plant-Disease-Classification) | CNN leaf-disease classifier (38 classes) with Streamlit inference UI; validation accuracy ~91% on held-out split |
+![terminal](./assets/terminal.svg)
+
+</div>
 
 ---
 
-### Tech stack
+## Featured projects
 
-**Languages** · Go · Python · TypeScript · SQL  
-
-**Backend** · FastAPI · net/http · Redis (Lua, Streams) · MySQL · PostgreSQL / SQLite · SQLAlchemy · Alembic · GORM  
-
-**Frontend** · React · Next.js · Vite · Tailwind · Streamlit  
-
-**AI / ML** · TensorFlow / Keras · Hugging Face Transformers · Anthropic Claude · VADER · scikit-learn  
-
-**DevOps / quality** · Docker Compose · k6 · pytest · Go testing (`-race`) · GitHub Actions (where present)
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/granzer69/Ticket-Engine">Ticket-Engine</a></h3>
+      <p>High-concurrency booking path: Go API → Redis Lua atomic allocation + Streams → worker → MySQL. Docker Compose local stack and k6 load scripts.</p>
+      <p><code>Go</code> · <code>Redis</code> · <code>MySQL</code> · <code>Docker</code> · <code>k6</code></p>
+      <p><sub>Engineering signal: Lua-atomic allocation + idempotent retries under concurrent clients.</sub></p>
+    </td>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/granzer69/Range-Apply">Range-Apply</a></h3>
+      <p>Job-intelligence / ATS discovery platform — normalize listings, dedup, and provenance. Apply automation still in progress.</p>
+      <p><code>Python</code> · <code>FastAPI</code> · <code>SQL</code></p>
+      <p><sub>Engineering signal: ATS discovery scaffolding (Greenhouse / Lever / Ashby) with match-engine work ongoing.</sub></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/granzer69/CareerOS">CareerOS</a></h3>
+      <p>Resume analysis platform with JWT auth, Postgres + Alembic, and Claude structured scoring. Not autonomous apply.</p>
+      <p><code>FastAPI</code> · <code>React</code> · <code>Postgres</code> · <code>Claude</code></p>
+      <p><sub>Engineering signal: authenticated scoring pipeline with real schema migrations.</sub></p>
+    </td>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/granzer69/fake-news-analyzer">fake-news-analyzer</a></h3>
+      <p>Media-trust pipeline: Hugging Face fake-news classifier, sentiment, and heuristic trust / clickbait scores behind a FastAPI + Next.js UI.</p>
+      <p><code>FastAPI</code> · <code>Next.js</code> · <code>HF</code> · <code>TypeScript</code></p>
+      <p><sub>Engineering signal: classifier + heuristics composed into a single trust API.</sub></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/granzer69/Stock-Market-Predictor">Stock-Market-Predictor</a></h3>
+      <p>Keras sequence model for next-day close prediction, FastAPI inference, and a Next.js dashboard over historical CSV data.</p>
+      <p><code>TensorFlow/Keras</code> · <code>FastAPI</code> · <code>Next.js</code></p>
+      <p><sub>Engineering signal: training → inference API → dashboard, not a notebook-only demo.</sub></p>
+    </td>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/granzer69/Plant-Disease-Classification">Plant-Disease-Classification</a></h3>
+      <p>CNN leaf-disease classifier (38 classes) with an inference UI. Validation accuracy ~91% from training history on the held-out split.</p>
+      <p><code>TensorFlow/Keras</code> · <code>Python</code></p>
+      <p><sub>Engineering signal: multi-class CNN with recorded ~91% val accuracy.</sub></p>
+    </td>
+  </tr>
+</table>
 
 ---
 
-### Current focus
+## Architecture — Ticket Engine
 
-- Hardening **Ticket Engine** V2 (reconciliation, recovery, observability, recorded k6 benchmarks)
-- Shipping **Range-Apply** match APIs end-to-end (v3 currently partially stubbed)
-- Deepening systems + ML engineering for internship / early-career roles
+<div align="center">
 
----
+![Ticket Engine architecture](./assets/arch-ticket.svg)
 
-### GitHub stats
+</div>
 
-![Ribhu's GitHub stats](https://github-readme-stats.vercel.app/api?username=granzer69&show_icons=true&theme=tokyonight&hide_title=true&count_private=true)
-
-![Top langs](https://github-readme-stats.vercel.app/api/top-langs/?username=granzer69&layout=compact&theme=tokyonight&hide_title=true)
+- **Redis owns hot allocation** — Lua script does atomic pop + idempotent user book; Streams carry the persist event.
+- **Worker persists sold state to MySQL** — eventual consistency by design; durable ownership lives in MySQL.
+- **Load path is instrumented** — Docker Compose stack + k6 scripts (benchmark numbers not published yet).
 
 ---
 
-### Connect
+## Tech stack
+
+**Languages** · Go · Python · TypeScript · C · Java · SQL
+
+**Backend** · FastAPI · Redis · MySQL · Postgres
+
+**Frontend** · React · Next.js
+
+**AI / ML** · TensorFlow / Keras · scikit-learn · Hugging Face · Claude
+
+**Infra** · Docker · Git · Linux · k6
+
+---
+
+## Activity
+
+<div align="center">
+
+![Activity graph](https://github-readme-activity-graph.vercel.app/graph?username=granzer69&bg_color=0b0f14&color=3dd6c6&line=6ea8fe&point=e6edf3&area=true&hide_border=true)
+
+<!-- Contribution snake: requires .github/workflows/snake.yml (Platane/snk) to run once.
+     After the action publishes to the `output` branch, uncomment:
+![snake](https://raw.githubusercontent.com/granzer69/granzer69/output/github-contribution-grid-snake.svg)
+-->
+
+</div>
+
+---
+
+## Contact
 
 - Email: [ribhusiri@gmail.com](mailto:ribhusiri@gmail.com)
 - X: [@s_ribhu](https://x.com/s_ribhu)
 - GitHub: [granzer69](https://github.com/granzer69)
 
+<details>
+<summary>misc</summary>
 
+<br/>
+
+The Earth is flat — funniest thing you'll ever hear. (It's not. I just keep the bit.)
+
+</details>
