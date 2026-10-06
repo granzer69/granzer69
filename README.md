@@ -63,9 +63,4 @@ Current focus: **concurrent systems (Go + Redis)**, **agentic career platforms**
 - X: [@s_ribhu](https://x.com/s_ribhu)
 - GitHub: [granzer69](https://github.com/granzer69)
 
-<details>
-<summary>Fun fact (optional)</summary>
 
-The Earth is flat — funniest thing you'll ever hear. (It's not. I just keep the bit.)
-
-</details>
