@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 280" width="900" height="280" role="img" aria-label="Ticket Engine architecture: User to Go API to Redis to Worker to MySQL">
+  <title>Ticket Engine Architecture</title>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#6ea8fe"/>
+    </marker>
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="900" height="280" rx="8" fill="#0b0f14"/>
+  <rect x="1" y="1" width="898" height="278" rx="8" fill="none" stroke="#21262d"/>
+
+  <!-- Header -->
+  <text x="28" y="36"
+        font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+        font-size="13" letter-spacing="2" fill="#8b949e">TICKET ENGINE · DATA PATH</text>
+  <line x1="28" y1="48" x2="220" y2="48" stroke="#3dd6c6" stroke-width="1" opacity="0.6"/>
+
+  <!-- Nodes -->
+  <!-- USER -->
+  <g>
+    <rect x="28" y="100" width="110" height="64" rx="6" fill="#12181f" stroke="#21262d" stroke-width="1.5"/>
+    <text x="83" y="128" text-anchor="middle"
+          font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+          font-size="13" font-weight="600" fill="#e6edf3">USER</text>
+    <text x="83" y="146" text-anchor="middle"
+          font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+          font-size="10" fill="#8b949e">POST /book</text>
+  </g>
+
+  <!-- GO API -->
+  <g>
+    <rect x="178" y="100" width="120" height="64" rx="6" fill="#12181f" stroke="#3dd6c6" stroke-width="1.5"/>
+    <text x="238" y="128" text-anchor="middle"
+          font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+          font-size="13" font-weight="600" fill="#e6edf3">GO API</text>
+    <text x="238" y="146" text-anchor="middle"
+          font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+          font-size="10" fill="#3dd6c6">net/http</text>
+  </g>
+
+  <!-- REDIS (pulse) -->
+  <g>
+    <rect x="348" y="88" width="160" height="88" rx="6" fill="#12181f" stroke="#3dd6c6" stroke-width="1.75" filter="url(#softGlow)">
+      <animate attributeName="stroke-opacity" values="0.55;1;0.55" dur="2.4s" repeatCount="indefinite"/>
+    </rect>
+    <text x="428" y="118" text-anchor="middle"
+          font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+          font-size="13" font-weight="600" fill="#e6edf3">REDIS</text>
+    <text x="428" y="136" text-anchor="middle"
+          font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+          font-size="10" fill="#3dd6c6">Lua atomic alloc</text>
+    <text x="428" y="152" text-anchor="middle"
+          font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+          font-size="10" fill="#6ea8fe">Streams (XADD)</text>
+  </g>
+
+  <!-- WORKER -->
+  <g>
+    <rect x="558" y="100" width="120" height="64" rx="6" fill="#12181f" stroke="#6ea8fe" stroke-width="1.5"/>
+    <text x="618" y="128" text-anchor="middle"
+          font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+          font-size="13" font-weight="600" fill="#e6edf3">WORKER</text>
+    <text x="618" y="146" text-anchor="middle"
+          font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+          font-size="10" fill="#6ea8fe">stream consumer</text>
+  </g>
+
+  <!-- MYSQL -->
+  <g>
+    <rect x="718" y="100" width="150" height="64" rx="6" fill="#12181f" stroke="#21262d" stroke-width="1.5"/>
+    <text x="793" y="128" text-anchor="middle"
+          font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+          font-size="13" font-weight="600" fill="#e6edf3">MYSQL</text>
+    <text x="793" y="146" text-anchor="middle"
+          font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+          font-size="10" fill="#8b949e">persistence</text>
+  </g>
+
+  <!-- Arrows -->
+  <g stroke="#6ea8fe" stroke-width="1.5" fill="none" marker-end="url(#arrow)" opacity="0.85">
+    <line x1="138" y1="132" x2="172" y2="132"/>
+    <line x1="298" y1="132" x2="342" y2="132"/>
+    <line x1="508" y1="132" x2="552" y2="132"/>
+    <line x1="678" y1="132" x2="712" y2="132"/>
+  </g>
+
+  <!-- Concept labels -->
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11">
+    <text x="28" y="210" fill="#8b949e">
+      <tspan fill="#3dd6c6">●</tspan>
+      <tspan dx="6" fill="#8b949e">atomic allocation</tspan>
+      <tspan dx="18" fill="#21262d">|</tspan>
+      <tspan dx="18" fill="#3dd6c6">●</tspan>
+      <tspan dx="6" fill="#8b949e">queue / stream processing</tspan>
+      <tspan dx="18" fill="#21262d">|</tspan>
+      <tspan dx="18" fill="#3dd6c6">●</tspan>
+      <tspan dx="6" fill="#8b949e">persistence</tspan>
+      <tspan dx="18" fill="#21262d">|</tspan>
+      <tspan dx="18" fill="#3dd6c6">●</tspan>
+      <tspan dx="6" fill="#8b949e">concurrency</tspan>
+    </text>
+    <text x="28" y="240" fill="#6ea8fe" opacity="0.8">Docker Compose · k6 load scripts · idempotent retries</text>
+  </g>
+</svg>

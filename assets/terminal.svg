@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200" width="900" height="200" role="img" aria-label="Terminal: whoami, focus, currently building">
+  <title>Terminal</title>
+  <defs>
+    <linearGradient id="termTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#161b22"/>
+      <stop offset="100%" stop-color="#12181f"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Frame -->
+  <rect width="900" height="200" rx="10" fill="#0b0f14"/>
+  <rect x="1" y="1" width="898" height="198" rx="10" fill="#12181f" stroke="#21262d" stroke-width="1.5"/>
+
+  <!-- Title bar -->
+  <rect x="1" y="1" width="898" height="32" rx="10" fill="url(#termTop)"/>
+  <rect x="1" y="18" width="898" height="16" fill="#161b22"/>
+  <circle cx="22" cy="17" r="5" fill="#21262d"/>
+  <circle cx="40" cy="17" r="5" fill="#21262d"/>
+  <circle cx="58" cy="17" r="5" fill="#21262d"/>
+  <text x="450" y="21" text-anchor="middle"
+        font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+        font-size="11" fill="#8b949e">granzer69 — zsh</text>
+
+  <!-- Lines -->
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15">
+    <!-- whoami -->
+    <text x="28" y="68">
+      <tspan fill="#3dd6c6">$</tspan>
+      <tspan dx="10" fill="#8b949e">whoami</tspan>
+    </text>
+    <text x="28" y="92" fill="#e6edf3">ribhu</text>
+
+    <!-- focus -->
+    <text x="28" y="122">
+      <tspan fill="#3dd6c6">$</tspan>
+      <tspan dx="10" fill="#8b949e">focus</tspan>
+    </text>
+    <text x="28" y="146">
+      <tspan fill="#e6edf3">AI</tspan>
+      <tspan fill="#21262d">  ·  </tspan>
+      <tspan fill="#e6edf3">Backend</tspan>
+      <tspan fill="#21262d">  ·  </tspan>
+      <tspan fill="#e6edf3">Distributed Systems</tspan>
+    </text>
+
+    <!-- currently_building -->
+    <text x="28" y="176">
+      <tspan fill="#3dd6c6">$</tspan>
+      <tspan dx="10" fill="#8b949e">currently_building</tspan>
+      <tspan dx="14" fill="#6ea8fe">Ticket Engine</tspan>
+      <tspan fill="#21262d">  ·  </tspan>
+      <tspan fill="#6ea8fe">CareerOS</tspan>
+      <tspan fill="#21262d">  ·  </tspan>
+      <tspan fill="#6ea8fe">WiFi CSI</tspan>
+      <!-- blinking cursor -->
+      <tspan dx="6" fill="#3dd6c6">
+        <animate attributeName="opacity" values="1;0;1" dur="1.1s" repeatCount="indefinite"/>█
+      </tspan>
+    </text>
+  </g>
+</svg>
