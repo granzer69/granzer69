@@ -99,12 +99,10 @@ B.Tech CSE (Data Science) @ MGIT, Hyderabad · Open to AI/ML & backend internshi
 
 <div align="center">
 
-![Activity graph](https://github-readme-activity-graph.vercel.app/graph?username=granzer69&bg_color=0b0f14&color=3dd6c6&line=6ea8fe&point=e6edf3&area=true&hide_border=true)
-
-<!-- Contribution snake: requires .github/workflows/snake.yml (Platane/snk) to run once.
-     After the action publishes to the `output` branch, uncomment:
-![snake](https://raw.githubusercontent.com/granzer69/granzer69/output/github-contribution-grid-snake.svg)
--->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/granzer69/granzer69/output/github-contribution-grid-snake-dark.svg">
+  <img alt="Contribution activity graph" src="https://raw.githubusercontent.com/granzer69/granzer69/output/github-contribution-grid-snake.svg">
+</picture>
 
 </div>
 
