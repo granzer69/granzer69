@@ -8,11 +8,7 @@ B.Tech CSE (Data Science) @ MGIT, Hyderabad · Open to AI/ML & backend internshi
 
 </div>
 
-<div align="center">
-
-![divider](./assets/divider.svg)
-
-</div>
+---
 
 <div align="center">
 
@@ -20,48 +16,58 @@ B.Tech CSE (Data Science) @ MGIT, Hyderabad · Open to AI/ML & backend internshi
 
 </div>
 
-<div align="center">
+---
 
-![divider](./assets/divider.svg)
-
-![Featured projects](./assets/header-featured-projects.svg)
-
-</div>
+## Featured projects
 
 <table>
   <tr>
     <td width="50%" valign="top">
-      <a href="https://github.com/granzer69/Ticket-Engine"><img src="./assets/card-ticket-engine.svg" width="100%" alt="Ticket-Engine"/></a>
+      <h3><a href="https://github.com/granzer69/Ticket-Engine">Ticket-Engine</a></h3>
+      <p>High-concurrency booking path: Go API → Redis Lua atomic allocation + Streams → worker → MySQL. Docker Compose local stack and k6 load scripts.</p>
+      <p><code>Go</code> · <code>Redis</code> · <code>MySQL</code> · <code>Docker</code> · <code>k6</code></p>
+      <p><sub>Engineering signal: Lua-atomic allocation + idempotent retries under concurrent clients.</sub></p>
     </td>
     <td width="50%" valign="top">
-      <a href="https://github.com/granzer69/Range-Apply"><img src="./assets/card-range-apply.svg" width="100%" alt="Range-Apply"/></a>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <a href="https://github.com/granzer69/CareerOS"><img src="./assets/card-careeros.svg" width="100%" alt="CareerOS"/></a>
-    </td>
-    <td width="50%" valign="top">
-      <a href="https://github.com/granzer69/fake-news-analyzer"><img src="./assets/card-fake-news-analyzer.svg" width="100%" alt="fake-news-analyzer"/></a>
+      <h3><a href="https://github.com/granzer69/Range-Apply">Range-Apply</a></h3>
+      <p>Job-intelligence / ATS discovery platform — normalize listings, dedup, and provenance. Apply automation still in progress.</p>
+      <p><code>Python</code> · <code>FastAPI</code> · <code>SQL</code></p>
+      <p><sub>Engineering signal: ATS discovery scaffolding (Greenhouse / Lever / Ashby) with match-engine work ongoing.</sub></p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <a href="https://github.com/granzer69/Stock-Market-Predictor"><img src="./assets/card-stock-market-predictor.svg" width="100%" alt="Stock-Market-Predictor"/></a>
+      <h3><a href="https://github.com/granzer69/CareerOS">CareerOS</a></h3>
+      <p>Resume analysis platform with JWT auth, Postgres + Alembic, and Claude structured scoring. Not autonomous apply.</p>
+      <p><code>FastAPI</code> · <code>React</code> · <code>Postgres</code> · <code>Claude</code></p>
+      <p><sub>Engineering signal: authenticated scoring pipeline with real schema migrations.</sub></p>
     </td>
     <td width="50%" valign="top">
-      <a href="https://github.com/granzer69/Plant-Disease-Classification"><img src="./assets/card-plant-disease-classification.svg" width="100%" alt="Plant-Disease-Classification"/></a>
+      <h3><a href="https://github.com/granzer69/fake-news-analyzer">fake-news-analyzer</a></h3>
+      <p>Media-trust pipeline: Hugging Face fake-news classifier, sentiment, and heuristic trust / clickbait scores behind a FastAPI + Next.js UI.</p>
+      <p><code>FastAPI</code> · <code>Next.js</code> · <code>HF</code> · <code>TypeScript</code></p>
+      <p><sub>Engineering signal: classifier + heuristics composed into a single trust API.</sub></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/granzer69/Stock-Market-Predictor">Stock-Market-Predictor</a></h3>
+      <p>Keras sequence model for next-day close prediction, FastAPI inference, and a Next.js dashboard over historical CSV data.</p>
+      <p><code>TensorFlow/Keras</code> · <code>FastAPI</code> · <code>Next.js</code></p>
+      <p><sub>Engineering signal: training → inference API → dashboard, not a notebook-only demo.</sub></p>
+    </td>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/granzer69/Plant-Disease-Classification">Plant-Disease-Classification</a></h3>
+      <p>CNN leaf-disease classifier (38 classes) with an inference UI. Validation accuracy ~91% from training history on the held-out split.</p>
+      <p><code>TensorFlow/Keras</code> · <code>Python</code></p>
+      <p><sub>Engineering signal: multi-class CNN with recorded ~91% val accuracy.</sub></p>
     </td>
   </tr>
 </table>
 
-<div align="center">
+---
 
-![divider](./assets/divider.svg)
-
-![Architecture — Ticket Engine](./assets/header-architecture.svg)
-
-</div>
+## Architecture — Ticket Engine
 
 <div align="center">
 
@@ -73,79 +79,27 @@ B.Tech CSE (Data Science) @ MGIT, Hyderabad · Open to AI/ML & backend internshi
 - **Worker persists sold state to MySQL** — eventual consistency by design; durable ownership lives in MySQL.
 - **Load path is instrumented** — Docker Compose stack + k6 scripts (benchmark numbers not published yet).
 
-<div align="center">
+---
 
-![divider](./assets/divider.svg)
-
-![Tech stack](./assets/header-tech-stack.svg)
-
-</div>
-
-<div align="center">
+## Tech stack
 
 **Languages** · Go · Python · TypeScript · C · Java · SQL
 
-<br/>
-
-<img src="https://skillicons.dev/icons?i=go,py,ts,c,java,mysql&amp;theme=dark" alt="" />
-
-<br/>
-
 **Backend** · FastAPI · Redis · MySQL · Postgres
-
-<br/>
-
-<img src="https://skillicons.dev/icons?i=fastapi,redis,mysql,postgres&amp;theme=dark" alt="" />
-
-<br/>
 
 **Frontend** · React · Next.js
 
-<br/>
-
-<img src="https://skillicons.dev/icons?i=react,nextjs&amp;theme=dark" alt="" />
-
-<br/>
-
 **AI / ML** · TensorFlow / Keras · scikit-learn · Hugging Face · Claude
-
-<br/>
-
-<img src="https://skillicons.dev/icons?i=tensorflow,sklearn&amp;theme=dark" alt="" />
-&nbsp;
-<img src="./assets/tech-text-keras.svg" height="32" alt="Keras" />
-&nbsp;
-<img src="./assets/tech-text-huggingface.svg" height="32" alt="Hugging Face" />
-&nbsp;
-<img src="./assets/tech-text-claude.svg" height="32" alt="Claude" />
-
-<br/>
 
 **Infra** · Docker · Git · Linux · k6
 
-<br/>
+---
 
-<img src="https://skillicons.dev/icons?i=docker,git,linux&amp;theme=dark" alt="" />
-&nbsp;
-<img src="./assets/tech-text-k6.svg" height="32" alt="k6" />
-
-</div>
+## Activity
 
 <div align="center">
-
-![divider](./assets/divider.svg)
-
-![Activity](./assets/header-activity.svg)
-
-</div>
-
-<div align="center">
-
-![Activity frame](./assets/activity-frame-top.svg)
 
 ![Activity graph](https://github-readme-activity-graph.vercel.app/graph?username=granzer69&bg_color=0b0f14&color=3dd6c6&line=6ea8fe&point=e6edf3&area=true&hide_border=true)
-
-![Activity frame bottom](./assets/activity-frame-bottom.svg)
 
 <!-- Contribution snake: requires .github/workflows/snake.yml (Platane/snk) to run once.
      After the action publishes to the `output` branch, uncomment:
@@ -154,23 +108,13 @@ B.Tech CSE (Data Science) @ MGIT, Hyderabad · Open to AI/ML & backend internshi
 
 </div>
 
-<div align="center">
+---
 
-![divider](./assets/divider.svg)
+## Contact
 
-![Contact](./assets/header-contact.svg)
-
-</div>
-
-<div align="center">
-
-<a href="mailto:ribhusiri@gmail.com"><img src="./assets/contact-email.svg" alt="Email: ribhusiri@gmail.com" height="36"/></a>
-&nbsp;&nbsp;
-<a href="https://x.com/s_ribhu"><img src="./assets/contact-x.svg" alt="X: @s_ribhu" height="36"/></a>
-&nbsp;&nbsp;
-<a href="https://github.com/granzer69"><img src="./assets/contact-github.svg" alt="GitHub: granzer69" height="36"/></a>
-
-</div>
+- Email: [ribhusiri@gmail.com](mailto:ribhusiri@gmail.com)
+- X: [@s_ribhu](https://x.com/s_ribhu)
+- GitHub: [granzer69](https://github.com/granzer69)
 
 <details>
 <summary>misc</summary>

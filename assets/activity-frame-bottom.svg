@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 16" width="900" height="16" role="img" aria-hidden="true">
-  <title>Activity frame bottom</title>
-  <rect width="900" height="16" fill="#0b0f14"/>
-  <line x1="40" y1="4" x2="860" y2="4" stroke="#21262d" stroke-width="1"/>
-  <line x1="40" y1="4" x2="860" y2="4" stroke="#3dd6c6" stroke-width="1" opacity="0.35" stroke-dasharray="4 8">
-    <animate attributeName="stroke-dashoffset" values="0;24" dur="3s" repeatCount="indefinite"/>
-  </line>
-</svg>
